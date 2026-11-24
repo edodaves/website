@@ -1614,3 +1614,9 @@ h3 em,
 @media (min-width: 992px) {
   .hero { grid-template-columns: minmax(0, 29rem) 1fr minmax(0, 19rem); }
 }
+
+/* The closed phone menu must not exist on the page: without this, the
+   invisible full-screen menu sat on top of everything and swallowed clicks. */
+.mobile-menu[hidden] { display: none !important; }
+.mobile-menu:not(.is-open) { pointer-events: none; }
+[hidden] { display: none !important; }
